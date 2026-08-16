@@ -9,22 +9,25 @@ export const photos: Photo[] = [
     src: Image1.src,
     alt: "Fashion model with windblown hair",
     className:
-      "left-[4%] top-[2%] w-[284px] h-[417px] border-2 border-primary z-99",
+      "left-[4%] top-[2%] w-[160px] h-[235px] sm:w-[200px] sm:h-[293px] md:w-[240px] md:h-[352px] lg:w-[284px] lg:h-[417px] border-2 border-primary z-99",
   },
   {
     src: Image2.src,
     alt: "Model posing in emerald dress",
-    className: "left-[46%] top-0 w-[258px] h-[377px] z-99",
+    className:
+      "left-[46%] top-0 w-[145px] h-[212px] sm:w-[182px] sm:h-[266px] md:w-[218px] md:h-[319px] lg:w-[258px] lg:h-[377px] z-99",
   },
   {
     src: Image4.src,
     alt: "Couple wearing sunglasses",
-    className: "left-[22%] top-[42.5%] w-[230px] h-[337px] z-10",
+    className:
+      "left-[22%] top-[42.5%] w-[130px] h-[190px] sm:w-[162px] sm:h-[238px] md:w-[195px] md:h-[285px] lg:w-[230px] lg:h-[337px] z-10",
   },
   {
     src: Image3.src,
     alt: "Red accessories still life",
-    className: "left-[56%] top-[33%] w-[281px] h-[411px]",
+    className:
+      "left-[56%] top-[33%] w-[158px] h-[231px] sm:w-[198px] sm:h-[290px] md:w-[238px] md:h-[348px] lg:w-[281px] lg:h-[411px]",
   },
 ];
 
