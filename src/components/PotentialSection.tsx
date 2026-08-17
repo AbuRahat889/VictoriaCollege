@@ -83,7 +83,6 @@ export default function PotentialSection() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-
               {/* Photo 2 */}
               <motion.div
                 custom={0.35}
