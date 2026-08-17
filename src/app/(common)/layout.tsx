@@ -1,3 +1,4 @@
+import Footer from "@/components/sheard/Footer";
 import Navbar from "@/components/sheard/Navbar";
 
 export default function RootLayout({
@@ -9,6 +10,7 @@ export default function RootLayout({
     <main className="">
       <Navbar />
       <div className="">{children}</div>
+      <Footer />
     </main>
   );
 }

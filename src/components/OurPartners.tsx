@@ -1,9 +1,8 @@
-import React from "react";
-import logo1 from "@/assets/partner/university-london.png";
 import logo2 from "@/assets/partner/arts-university.png";
 import bgImage from "@/assets/partner/circleBg.png";
-import Heading from "./sheard/Heading";
+import logo1 from "@/assets/partner/university-london.png";
 import Image from "next/image";
+import Heading from "./sheard/Heading";
 
 export default function OurPartners() {
   return (
@@ -20,24 +19,33 @@ export default function OurPartners() {
               have valuable connections within our industry.
             </p>
           </div>
+
           <div
-            style={{ backgroundImage: `url(${bgImage.src})` }}
-            className="col-span-5 w-full space-y-10 bg-contain bg-no-repeat bg-left pb-20 lg:pb-0 py-0 lg:py-20 "
+            style={{
+              backgroundImage: `url(${bgImage.src})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "left center",
+            }}
+            className="col-span-5 flex flex-col justify-center gap-10 py-10 lg:py-20"
           >
-            <Image
-              src={logo1}
-              alt="partner logo"
-              height={500}
-              width={500}
-              className="h-20 w-full"
-            />
-            <Image
-              src={logo2}
-              alt="partner logo"
-              height={500}
-              width={500}
-              className="h-21.5 w-full"
-            />
+            <div className="w-full max-w-105">
+              <Image
+                src={logo1}
+                alt="University of London"
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
+
+            <div className="w-full max-w-105">
+              <Image
+                src={logo2}
+                alt="Arts University"
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
