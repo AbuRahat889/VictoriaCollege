@@ -2,6 +2,9 @@ import Student1 from "@/assets/testimonial/testimonialImage3.png";
 import Student2 from "@/assets/testimonial/testimonialImage2.png";
 import Student3 from "@/assets/testimonial/testimonialImage1.png";
 
+import story1 from "@/assets/testimonial/testimonialImage2.png";
+import story2 from "@/assets/testimonial/testimonialImage1.png";
+
 export interface Testimonial {
   name: string;
   role: string;
@@ -30,5 +33,24 @@ export const testimonials: Testimonial[] = [
     quote:
       "Being surrounded by such a collaborative community made all the difference. I built connections here that turned into my first internship, and the studio culture kept me motivated every day.",
     image: Student3.src,
+  },
+];
+
+export const storyData = [
+  {
+    id: 1,
+    image: story1,
+    title: "Induction in VCAD Canary Wharf campus",
+    description:
+      "If you join Victoria College of Arts and Design, you can expect the highest calibre of teaching, cutting-edge facilities, and exceptional industry connections, which will help to prepare you for a rewarding career in the creative and tech industries.",
+    slug: "/stories/induction-vcad-canary-wharf",
+  },
+  {
+    id: 2,
+    image: story2,
+    title: "Creative Design Workshop",
+    description:
+      "Students worked closely with leading designers and explored innovative design techniques through practical sessions.",
+    slug: "/stories/design-workshop",
   },
 ];
