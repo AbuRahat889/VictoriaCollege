@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Victoria College
 
-## Getting Started
+Live demo: https://victoria-college.vercel.app/
 
-First, run the development server:
+Victoria College is a modern Next.js landing and course-focused website designed to present the school’s campus, courses, testimonials, and academic value in a polished, conversion-friendly way.
+
+## How to run it locally
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open http://localhost:3000 in your browser.
+
+If you want a production build instead:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How far we got and what we prioritised
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project already includes the main landing page structure, course sections, campus and partner content, testimonial blocks, and a responsive visual style. I focused on the parts that matter most for a first impression: clear navigation, strong hero messaging, course discovery, and a professional visual layout that feels credible and modern.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I also used Framer Motion to add subtle movement and interaction, which helps the site feel more alive without making it heavy or distracting. The app is built in Next.js with reusable components and a content-driven structure, so it is easy to extend as the college grows.
 
-## Learn More
+## One decision beyond the design
 
-To learn more about Next.js, take a look at the following resources:
+One change I made that was not explicitly in the design was adding motion-driven transitions using Framer Motion. I did this because the page needed a bit more personality and polish to feel premium, especially on the hero, cards, and section reveals. The motion is subtle enough to keep the experience professional while still making the interface feel more dynamic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## What I would do next with more time
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Given more time, I would expand the site with additional pages, build out a full course purchase flow, and add an admin dashboard for managing courses, enrollments, and content. I would also improve the CMS/content structure and strengthen the booking experience so the site becomes more than a marketing page and turns into a complete student enrollment platform.
