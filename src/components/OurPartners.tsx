@@ -9,7 +9,7 @@ export default function OurPartners() {
   return (
     <div className="bg-[#020928]  px-5 md:px-0">
       <div className="container mx-auto">
-        <div className="grid grid-cols-12 gap-4 ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 ">
           <div className="col-span-7 w-full py-20">
             <Heading subtitle="OUR PARTNERS" title="Partner Institutions" />
             <p className="text-white text-base font-normal leading-6 mt-10 max-w-2xl">
@@ -22,7 +22,7 @@ export default function OurPartners() {
           </div>
           <div
             style={{ backgroundImage: `url(${bgImage.src})` }}
-            className="col-span-5 w-full space-y-10 bg-contain bg-no-repeat bg-left py-20 "
+            className="col-span-5 w-full space-y-10 bg-contain bg-no-repeat bg-left pb-20 lg:pb-0 py-0 lg:py-20 "
           >
             <Image
               src={logo1}

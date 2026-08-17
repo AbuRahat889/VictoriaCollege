@@ -3,6 +3,7 @@ import CampusSlider from "@/components/OurCampuses";
 import OurCourses from "@/components/OurCourses/OurCourses";
 import OurPartners from "@/components/OurPartners";
 import PotentialSection from "@/components/PotentialSection";
+import CareerBanner from "@/components/sheard/CareerBanner";
 import TestimonialSlider from "@/components/Testimonial";
 
 export default function Page() {
@@ -14,6 +15,7 @@ export default function Page() {
       <CampusSlider />
       <TestimonialSlider />
       <OurPartners />
+      <CareerBanner />
     </div>
   );
 }
