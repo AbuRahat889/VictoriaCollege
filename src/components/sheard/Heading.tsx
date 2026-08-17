@@ -16,7 +16,7 @@ export default function Heading({
           {title}
         </h2>
       </div>
-      <p className="text-white text-base font-normal leading-6 max-w-md">
+      <p className="text-white text-base font-normal leading-6 max-w-lg">
         {description}
       </p>
     </div>
