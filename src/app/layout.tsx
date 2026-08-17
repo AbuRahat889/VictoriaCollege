@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "victoria college",
+  title: "Victoria College",
   description:
     "victoria college website for students and teachers to manage their courses",
 };

@@ -1,7 +1,6 @@
 import AllCourses from "@/components/Courses/AllCourses";
 import OurGallery from "@/components/Courses/OurGallery";
 import Breadcrumb from "@/components/sheard/Breadcrumb";
-import CareerBanner from "@/components/sheard/CareerBanner";
 
 export default function page() {
   return (
@@ -15,7 +14,6 @@ export default function page() {
       />
       <AllCourses />
       <OurGallery />
-      <CareerBanner />
     </div>
   );
 }

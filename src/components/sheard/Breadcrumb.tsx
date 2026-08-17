@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import leftImage from "@/assets/breadcrum1.png";
 import rightImage from "@/assets/breadcrum2.png";
+import bgImage from "@/assets/partner/circleBg.png";
 
 interface BreadcrumbProps {
   title: string;
@@ -20,7 +21,15 @@ export default function Breadcrumb({
   isRightImg,
 }: BreadcrumbProps) {
   return (
-    <section className="relative overflow-hidden bg-[#050B31]">
+    <section
+      style={{
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right top",
+      }}
+      className="relative overflow-hidden bg-[#050B31]"
+    >
       <div className="container mx-auto relative px-5 py-16 md:py-20">
         <div className="relative flex items-center justify-center min-h-65">
           {/* Left Image */}

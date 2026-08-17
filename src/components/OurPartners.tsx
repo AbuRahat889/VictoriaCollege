@@ -6,7 +6,15 @@ import Heading from "./sheard/Heading";
 
 export default function OurPartners() {
   return (
-    <div className="bg-[#020928]  px-5 md:px-0">
+    <div
+      style={{
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right center",
+      }}
+      className="bg-[#020928]  px-5 md:px-0"
+    >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 ">
           <div className="col-span-7 w-full py-20">
@@ -20,15 +28,7 @@ export default function OurPartners() {
             </p>
           </div>
 
-          <div
-            style={{
-              backgroundImage: `url(${bgImage.src})`,
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "left center",
-            }}
-            className="col-span-5 flex flex-col justify-center gap-10 py-10 lg:py-20"
-          >
+          <div className="col-span-5 flex flex-col justify-center gap-10 py-10 lg:py-20 w-full ">
             <div className="w-full max-w-105">
               <Image
                 src={logo1}

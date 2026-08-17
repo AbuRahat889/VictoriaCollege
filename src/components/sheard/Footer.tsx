@@ -13,9 +13,41 @@ import advanceHE from "@/assets/footer/advanceHe.png";
 import qaa from "@/assets/footer/menmer.png";
 import cyber from "@/assets/footer/cyber-ess.png";
 
+import logo from "@/assets/footerLogo.png";
+import bgImage from "@/assets/footer/circles.png";
+
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#060B2F] text-white ">
+    <footer
+      style={{
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right top",
+      }}
+      className="relative overflow-hidden bg-[#060B2F] text-white "
+    >
+      <div className="container mx-auto relative z-10 px-6 py-14 md:py-20 ">
+        <div className="max-w-3xl">
+          {/* Logo */}
+          <div className="mb-8 bg-[#061665] p-2 w-20">
+            <Image
+              src={logo}
+              alt="Logo"
+              width={480}
+              height={480}
+              className="rounded h-full w-full"
+            />
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-white font-bold leading-17.5 text-4xl md:text-5xl lg:text-[64px]">
+            Get creative and{" "}
+            <span className="text-[#E22CE5]">turn your passion</span> for the
+            Arts into a rewarding career.
+          </h2>
+        </div>
+      </div>
       <div className="container mx-auto relative z-10 px-6 py-16 border-t border-[#384584]">
         <div className="flex flex-col lg:flex-row justify-between gap-14 ">
           {/* Left */}
