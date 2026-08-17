@@ -1,3 +1,5 @@
+import Navbar from "@/components/sheard/Navbar";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,6 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <main className="">
+      <Navbar />
       <div className="">{children}</div>
     </main>
   );

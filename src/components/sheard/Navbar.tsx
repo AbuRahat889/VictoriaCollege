@@ -1,68 +1,59 @@
+"use client";
+
+import logoImage from "@/assets/logo.png";
 import { Menu } from "lucide-react";
-import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const NAV_ITEMS = [
+  { label: "ABOUT VCAD", href: "#about" },
+  { label: "COURSES", href: "#courses" },
+  { label: "CONTACT US", href: "#contact" },
+];
 
 export default function Navbar() {
+  const [activeHref, setActiveHref] = useState(NAV_ITEMS[0].href);
+
   return (
-    <nav className="flex items-center justify-between gap-6">
-      <div className="flex items-center gap-3">
-        <svg width="34" height="34" viewBox="0 0 34 34" className="shrink-0">
-          <rect
-            x="0"
-            y="0"
-            width="14"
-            height="14"
-            rx="2"
-            fill="#ec1e79"
-            transform="rotate(45 7 7)"
+    <div className="bg-[#040D3D] py-6.25">
+      <nav className="grid grid-cols-2 gap-6 container mx-auto ">
+        <div className="flex items-center h-14 w-36">
+          <Image
+            src={logoImage}
+            alt="VCAD Logo"
+            width={500}
+            height={500}
+            className=""
           />
-          <rect
-            x="18"
-            y="0"
-            width="14"
-            height="14"
-            rx="2"
-            fill="#2dd4bf"
-            transform="rotate(45 25 7)"
-          />
-          <rect
-            x="9"
-            y="18"
-            width="14"
-            height="14"
-            rx="2"
-            fill="#a21caf"
-            transform="rotate(45 16 25)"
-          />
-        </svg>
-        <div className="leading-[1.05]">
-          <p className="font-extrabold text-sm tracking-wide">Victoria</p>
-          <p className="font-extrabold text-sm tracking-wide -mt-0.5">
-            College
-          </p>
-          <p className="text-[9px] text-slate-400 tracking-wide mt-0.5">
-            of Arts and Design
-          </p>
         </div>
-      </div>
 
-      <div className="hidden md:flex items-center gap-10 text-[11px] font-semibold tracking-widest text-slate-200">
-        <a href="#about" className="hover:text-white transition-colors">
-          ABOUT VCAD
-        </a>
-        <a href="#courses" className="hover:text-white transition-colors">
-          COURSES
-        </a>
-        <a href="#contact" className="hover:text-white transition-colors">
-          CONTACT US
-        </a>
-      </div>
+        <div className="flex items-center justify-between gap-6 ">
+          <div className="hidden md:flex items-center gap-14 text-[11px] font-semibold tracking-widest text-white uppercase">
+            {NAV_ITEMS.map((item) => {
+              const isActive = activeHref === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setActiveHref(item.href)}
+                  className={`pb-1 border-b-2 transition-colors duration-300 ease-in-out ${
+                    isActive
+                      ? "text-primary border-primary"
+                      : "border-transparent hover:text-primary "
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
 
-      <button
-        aria-label="Open menu"
-        className="p-2 rounded-md hover:bg-white/5 transition-colors"
-      >
-        <Menu size={22} />
-      </button>
-    </nav>
+          <button aria-label="Open menu" className="p-2 ">
+            <Menu className="text-white size-8" />
+          </button>
+        </div>
+      </nav>
+    </div>
   );
 }
