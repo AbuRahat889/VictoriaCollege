@@ -9,7 +9,7 @@ import { useState } from "react";
 const NAV_ITEMS = [
   { label: "ABOUT VCAD", href: "#about" },
   { label: "COURSES", href: "#courses" },
-  { label: "CONTACT US", href: "#contact" }, 
+  { label: "CONTACT US", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -37,7 +37,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setActiveHref(item.href)}
-                  className={`pb-1 border-b-2 transition-colors duration-300 ease-in-out ${
+                  className={`pb-1 border-b-2 transition-colors duration-300 ease-in-out text-base font-medium leading-6 ${
                     isActive
                       ? "text-primary border-primary"
                       : "border-transparent hover:text-primary "

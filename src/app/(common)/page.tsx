@@ -1,6 +1,7 @@
 import Hero from "@/components/HeroSection/Hero";
 import CampusSlider from "@/components/OurCampuses";
 import OurCourses from "@/components/OurCourses/OurCourses";
+import PotentialSection from "@/components/PotentialSection";
 import TestimonialSlider from "@/components/Testimonial";
 
 export default function Page() {
@@ -8,6 +9,7 @@ export default function Page() {
     <div className=" ">
       <Hero />
       <OurCourses />
+      <PotentialSection />
       <CampusSlider />
       <TestimonialSlider />
     </div>
