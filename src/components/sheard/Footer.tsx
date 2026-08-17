@@ -15,6 +15,7 @@ import cyber from "@/assets/footer/cyber-ess.png";
 
 import logo from "@/assets/footerLogo.png";
 import bgImage from "@/assets/footer/circles.png";
+import GridYxasis from "./GridYxasis";
 
 export default function Footer() {
   return (
@@ -27,6 +28,7 @@ export default function Footer() {
       }}
       className="relative overflow-hidden bg-[#060B2F] text-white "
     >
+      <GridYxasis />
       <div className="container mx-auto relative z-10 px-6 py-14 md:py-20 ">
         <div className="max-w-3xl">
           {/* Logo */}

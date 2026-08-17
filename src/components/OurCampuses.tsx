@@ -29,7 +29,7 @@ export default function CampusSlider() {
         {/* Slider */}
         <div className="relative h-56 sm:h-70 md:h-85 lg:h-105 flex items-center justify-center mt-16 sm:mt-20 md:mt-24 lg:mt-32 w-full">
           {/* Prev (side) slide */}
-          <div className="absolute bottom-0 left-2 sm:left-6 md:left-10 lg:left-16 w-[30%] sm:w-[32%] h-[80%] sm:h-[85%] rounded-md overflow-hidden hidden sm:block">
+          <div className="absolute bottom-0 left-2 sm:left-6 md:left-10 lg:left-16 w-[30%] sm:w-[32%] h-[80%] sm:h-[85%] rounded-md overflow-hidden hidden sm:block z-999">
             <img
               src={campuses[prevIndex].image}
               alt={campuses[prevIndex].name}
@@ -38,7 +38,7 @@ export default function CampusSlider() {
           </div>
 
           {/* Next (side) slide */}
-          <div className="absolute bottom-0 right-2 sm:right-6 md:right-10 lg:right-16 w-[30%] sm:w-[32%] h-[80%] sm:h-[85%] rounded-md overflow-hidden hidden sm:block">
+          <div className="absolute bottom-0 right-2 sm:right-6 md:right-10 lg:right-16 w-[30%] sm:w-[32%] h-[80%] sm:h-[85%] rounded-md overflow-hidden hidden sm:block z-999">
             <img
               src={campuses[nextIndex].image}
               alt={campuses[nextIndex].name}
@@ -47,7 +47,7 @@ export default function CampusSlider() {
           </div>
 
           {/* Active (center) slide */}
-          <div className="relative z-10 w-[88%] sm:w-[52%] md:w-[48%] lg:w-[46%] h-full rounded-md shadow-2xl">
+          <div className="relative z-999 w-[88%] sm:w-[52%] md:w-[48%] lg:w-[46%] h-full rounded-md shadow-2xl ">
             <AnimatePresence mode="wait">
               <motion.img
                 key={campuses[index].image}
@@ -63,7 +63,7 @@ export default function CampusSlider() {
 
             {/* Discover button */}
             <motion.button
-              className="absolute top-1/3 left-1/2 z-20 flex h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-y border-borderColor bg-linear-to-r from-white/20 to-white/5 backdrop-blur-xl text-[10px] sm:text-xs md:text-sm lg:text-base font-bold uppercase tracking-wide text-white shadow-lg cursor-pointer"
+              className="absolute top-1/3 left-1/2 z-9999 flex h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-y border-borderColor bg-linear-to-r from-white/20 to-white/5 backdrop-blur-xl text-[10px] sm:text-xs md:text-sm lg:text-base font-bold uppercase tracking-wide text-white shadow-lg cursor-pointer"
               whileTap={{ scale: 0.85, opacity: 0.7 }}
             >
               Discover
@@ -77,7 +77,7 @@ export default function CampusSlider() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
-                className="absolute bottom-6 sm:bottom-8 md:bottom-9 lg:bottom-10 left-0 w-full bg-[#37469c]/90 text-white text-center font-bold uppercase tracking-wide text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 md:py-4 lg:py-5"
+                className="absolute bottom-6 sm:bottom-8 md:bottom-9 lg:bottom-10 left-0 w-full bg-[#37469c]/90 text-white text-center font-bold uppercase tracking-wide text-xs sm:text-sm md:text-base py-2.5 sm:py-3.5 md:py-4 lg:py-5 z-9999"
               >
                 {campuses[index].name}
               </motion.div>
@@ -88,7 +88,7 @@ export default function CampusSlider() {
           <motion.button
             onClick={goPrev}
             aria-label="Previous campus"
-            className="absolute left-[4%] sm:left-[18%] md:left-[22%] lg:left-[26%] top-1/3 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-full bg-[#37469c] flex items-center justify-center cursor-pointer"
+            className="absolute left-[4%] sm:left-[18%] md:left-[22%] lg:left-[26%] top-1/3 -translate-y-1/2  w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-full bg-[#37469c] flex items-center justify-center cursor-pointer z-9999"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.85 }}
           >
@@ -99,7 +99,7 @@ export default function CampusSlider() {
           <motion.button
             onClick={goNext}
             aria-label="Next campus"
-            className="absolute right-[4%] sm:right-[18%] md:right-[22%] lg:right-[26%] top-1/3 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-full bg-primary flex items-center justify-center cursor-pointer"
+            className="absolute right-[4%] sm:right-[18%] md:right-[22%] lg:right-[26%] top-1/3 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-full bg-primary flex items-center justify-center cursor-pointer z-9999"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.85 }}
           >

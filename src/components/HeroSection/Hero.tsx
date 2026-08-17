@@ -4,7 +4,7 @@ import { DropFloatImage, DropTag } from "./HeroAnimation";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-[#030a2e] px-5 sm:px-8 md:px-12 lg:px-20 py-14 md:py-20 lg:py-25">
+    <section className="w-full bg-[#030a2e] px-5 sm:px-8 md:px-12 lg:px-20 py-14 md:py-20 lg:py-25 z-9999 relative">
       <div className="container mx-auto overflow-hidden">
         {/* Hero content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-8 items-center">

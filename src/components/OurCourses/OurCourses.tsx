@@ -8,7 +8,6 @@ import Heading from "../sheard/Heading";
 import Button from "../ui/button";
 import { COURSES_FAQ } from "@/constants/courseData";
 
-
 export default function OurCourses() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
@@ -17,7 +16,7 @@ export default function OurCourses() {
   };
 
   return (
-    <section className="bg-[#030a2e] py-20 px-5 md:px-0">
+    <section className="py-20 px-5 md:px-0">
       <div className="container mx-auto">
         <div className="mt-4 flex flex-col md:flex-row items-end justify-between gap-6">
           <Heading
@@ -74,7 +73,7 @@ export default function OurCourses() {
           </div>
 
           {/* Right column */}
-          <div className="relative h-80 w-full overflow-hidden rounded-2xl sm:h-96 lg:h-140">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl sm:h-96 lg:h-140  z-999">
             <Image
               src={coursesImage}
               alt="Students attending a fashion and design lecture"

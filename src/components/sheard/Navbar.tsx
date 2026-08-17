@@ -5,9 +5,10 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import GridYxasis from "./GridYxasis";
 
 const NAV_ITEMS = [
-  { label: "ABOUT VCAD", href: "#about" },
+  { label: "ABOUT VCAD", href: "/" },
   { label: "COURSES", href: "/courses" },
   { label: "CONTACT US", href: "#contact" },
 ];
@@ -17,6 +18,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-[#040D3D] py-6.25">
+      <GridYxasis />
       <nav className="grid grid-cols-2 gap-6 container mx-auto ">
         <div className="flex items-center h-14 w-36">
           <Image

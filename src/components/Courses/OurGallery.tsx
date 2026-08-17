@@ -27,7 +27,7 @@ export default function OurGallery() {
     dragFree: true,
   });
   return (
-    <div className="bg-[#030a2e] py-20 px-5 lg:px-0">
+    <div className="bg-[#040d3d] py-20 px-5 lg:px-0">
       <div className="text-center">
         <div className="flex-1">
           <p className="text-primary font-bold text-xl tracking-wide leading-[120%] uppercase">
@@ -48,7 +48,7 @@ export default function OurGallery() {
           {galleryData.map((item) => (
             <div
               key={item.id}
-              className="min-w-[260px] md:min-w-[300px] lg:min-w-[320px] pl-6"
+              className="min-w-65 md:min-w-75 lg:min-w-[320px] pl-6"
             >
               <div className="overflow-hidden rounded-2xl">
                 <Image
@@ -56,7 +56,7 @@ export default function OurGallery() {
                   alt="Gallery"
                   width={340}
                   height={420}
-                  className="h-[330px] w-full object-cover transition duration-500 hover:scale-105"
+                  className="h-82.5 w-full object-cover transition duration-500 hover:scale-105"
                 />
               </div>
             </div>

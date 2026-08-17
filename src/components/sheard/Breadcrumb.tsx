@@ -28,7 +28,7 @@ export default function Breadcrumb({
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right top",
       }}
-      className="relative overflow-hidden bg-[#050B31]"
+      className="relative overflow-hidden "
     >
       <div className="container mx-auto relative px-5 py-16 md:py-20">
         <div className="relative flex items-center justify-center min-h-65">
