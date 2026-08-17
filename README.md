@@ -2,19 +2,33 @@
 
 Live demo: https://victoria-college.vercel.app/
 
+![Victoria College project preview](public/vcad.png)
+
 Victoria College is a modern Next.js landing and course-focused website designed to present the school’s campus, courses, testimonials, and academic value in a polished, conversion-friendly way.
 
 ## How to run it locally
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the development server:
-   ```bash
-   npm run dev
-   ```
-3. Open http://localhost:3000 in your browser.
+First, check whether Node.js is installed:
+
+```bash
+node -v
+npm -v
+```
+
+If Node.js is not installed, install it with:
+
+```bash
+winget install OpenJS.NodeJS.LTS
+```
+
+Then run the app:
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
 
 If you want a production build instead:
 
