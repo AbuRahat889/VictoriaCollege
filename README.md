@@ -1,6 +1,6 @@
 # Victoria College
 
-Live demo: https://victoria-college.vercel.app/
+Live demo: https://victoria-college-coral.vercel.app
 
 ![Victoria College project preview](public/vcad.png)
 
