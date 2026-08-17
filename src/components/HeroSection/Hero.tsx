@@ -24,7 +24,7 @@ export default function Hero() {
               we have valuable connections within our industry. Search our
               latest courses.
             </p>
-            <div className="mt-10 md:mt-16.5 max-w-[320px]">
+            <div className="mt-10 md:mt-16.5 mb-12 max-w-[320px]">
               <Button>Explore Courses</Button>
             </div>
           </div>

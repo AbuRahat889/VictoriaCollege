@@ -7,7 +7,7 @@ export default function Heading({
   description,
 }: HeadingProps) {
   return (
-    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
+    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
       <div className="flex-1">
         <p className="text-primary font-bold text-xl tracking-wide leading-[120%] uppercase">
           {subtitle}

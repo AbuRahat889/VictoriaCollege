@@ -9,7 +9,7 @@ import { useState } from "react";
 const NAV_ITEMS = [
   { label: "ABOUT VCAD", href: "#about" },
   { label: "COURSES", href: "#courses" },
-  { label: "CONTACT US", href: "#contact" },
+  { label: "CONTACT US", href: "#contact" }, 
 ];
 
 export default function Navbar() {
