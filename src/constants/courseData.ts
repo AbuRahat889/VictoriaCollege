@@ -40,6 +40,7 @@ export const courseData = [
     id: 1,
     image: course1,
     title: "BSc (Hons) Business Management",
+    slug: "bsc-hons-business-management",
     description:
       "The BSc (Hons) in Business Management at Victoria College of Arts and Design blends creative thinking with real-world business skills.",
     school: "School of Business & Management",
@@ -51,6 +52,7 @@ export const courseData = [
     id: 2,
     image: course2,
     title: "BA (Hons) Fashion Media & Marketing",
+    slug: "ba-hons-fashion-media-marketing",
     description:
       "This programme provides students with a foundation in creative practice, integrating theoretical, practical, and technical elements.",
     school: "",
@@ -62,6 +64,7 @@ export const courseData = [
     id: 3,
     image: course2,
     title: "BA (Hons) Fashion Media & Marketing",
+    slug: "ba-hons-fashion-media-marketing",
     description:
       "This programme provides students with a foundation in creative practice, integrating theoretical, practical, and technical elements.",
     school: "",
@@ -73,6 +76,7 @@ export const courseData = [
     id: 4,
     image: course3,
     title: "BSc (Hons) Business Management",
+    slug: "bsc-hons-business-management",
     description:
       "This course introduces students to creative practice, focusing on theoretical, practical, and technical components. In early stages, students develop essential skills for academic success and personal growth.",
     school: "School of Business & Management",

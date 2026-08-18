@@ -13,11 +13,11 @@ import useEmblaCarousel from "embla-carousel-react";
 export const galleryData = [
   { id: 1, image: gallery1 },
   { id: 2, image: gallery2 },
-  { id: 3, image: gallery3 },
+  { id: 3, image: gallery7 },
   { id: 4, image: gallery4 },
   { id: 5, image: gallery5 },
   { id: 6, image: gallery6 },
-  { id: 7, image: gallery7 },
+  { id: 7, image: gallery3 },
 ];
 
 export default function OurGallery() {

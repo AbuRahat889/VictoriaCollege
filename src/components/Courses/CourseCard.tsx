@@ -1,8 +1,12 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import { MediaButton } from "../ui/icon";
+import { useRouter } from "next/navigation";
 
 interface CourseCardProps {
+  slug: string;
   image: StaticImageData | string;
   title: string;
   description: string;
@@ -12,6 +16,7 @@ interface CourseCardProps {
 }
 
 export default function CourseCard({
+  slug,
   image,
   title,
   description,
@@ -19,6 +24,7 @@ export default function CourseCard({
   duration,
   variant = "medium",
 }: CourseCardProps) {
+  const router = useRouter();
   const heights = {
     large: "h-[620px]",
     medium: "h-[298px]",
@@ -83,6 +89,9 @@ export default function CourseCard({
           className={cn(
             "flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#384584] bg-[#051251] hover:bg-primary hover:border-primary transition-all duration-300 ease-in-out cursor-pointer",
           )}
+          onClick={() => {
+            router.push(`/courses/${slug}`);
+          }}
         >
           <MediaButton type="rightArrow" />
         </button>

@@ -49,4 +49,4 @@ One change I made that was not explicitly in the design was adding motion-driven
 
 ## What I would do next with more time
 
-Given more time, I would expand the site with additional pages, build out a full course purchase flow, and add an admin dashboard for managing courses, enrollments, and content. I would also improve the CMS/content structure and strengthen the booking experience so the site becomes more than a marketing page and turns into a complete student enrollment platform.
+Given more time, I would expand the site with additional pages, build out a full course application flow, and add an admin dashboard for managing courses, application. I would also improve the CMS/content structure and strengthen the application experience so the site becomes more than a marketing page and turns into a complete student application platform.

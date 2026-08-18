@@ -59,7 +59,7 @@ export default function Breadcrumb({
           )}
 
           {/* Center Content */}
-          <div className="text-center max-w-3xl">
+          <div className="text-center max-w-4xl">
             <div className="text-lg font-medium leading-7 text-primaryText mb-3">
               <Link
                 href="/"
@@ -77,7 +77,7 @@ export default function Breadcrumb({
               {title}
             </h1>
 
-            <p className="mt-3 text-primaryText text-base leading-7 max-w-3xl mx-auto">
+            <p className="mt-3 text-primaryText text-base leading-7 w-full ">
               {description}
             </p>
           </div>
