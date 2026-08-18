@@ -18,13 +18,12 @@ export default function OurCourses() {
   return (
     <section className="py-20 px-5 md:px-0">
       <div className="container mx-auto">
-        <div className="mt-4 flex flex-col md:flex-row items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-end justify-between gap-6">
           <Heading
             subtitle="OUR COURSES"
             title="Explore our creative courses"
           />
-
-          <div className="w-full md:max-w-[320px]">
+          <div className="w-52 md:max-w-52">
             <Button>View Courses</Button>
           </div>
         </div>

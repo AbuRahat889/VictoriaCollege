@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import GridYxasis from "./GridYxasis";
+import { usePathname } from "next/navigation";
+import Button from "../ui/button";
 
 const NAV_ITEMS = [
   { label: "ABOUT VCAD", href: "/" },
@@ -15,6 +17,7 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [activeHref, setActiveHref] = useState(NAV_ITEMS[0].href);
+  const pathName = usePathname();
 
   return (
     <div className="bg-[#040D3D] py-6.25">
@@ -50,10 +53,15 @@ export default function Navbar() {
               );
             })}
           </div>
-
-          <button aria-label="Open menu" className="p-2 ">
-            <Menu className="text-white size-8" />
-          </button>
+          {pathName === "/" || pathName === "/courses" ? (
+            <button aria-label="Open menu" className="p-2 ">
+              <Menu className="text-white size-8" />
+            </button>
+          ) : (
+            <div className="max-w-52">
+              <Button>Apply Now</Button>
+            </div>
+          )}
         </div>
       </nav>
     </div>

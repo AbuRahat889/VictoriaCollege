@@ -3,7 +3,7 @@ import { MediaButton } from "../ui/icon";
 
 export default function DownloadCenter() {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+    <section className="container mx-auto px-4 sm:px-6 lg:px-14 py-8 sm:py-10 md:py-12">
       <div className="bg-[#040d3d] p-5 sm:p-6 md:p-7.5 rounded-lg flex flex-col md:flex-row md:justify-between md:items-center gap-6">
         {/* Content */}
         <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-center">

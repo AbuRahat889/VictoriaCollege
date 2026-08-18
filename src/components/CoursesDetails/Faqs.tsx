@@ -131,7 +131,7 @@ export default function RequirementsFAQ() {
   };
 
   return (
-    <section className="py-10 sm:py-12 md:py-16">
+    <section className="pt-10 sm:pt-12 md:pt-16">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[270px_1fr] xl:grid-cols-[280px_1fr]">
           {/* Category Navigation */}
