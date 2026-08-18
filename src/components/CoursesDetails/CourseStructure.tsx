@@ -2,146 +2,27 @@
 
 import { useState } from "react";
 
-const courseYears = [
-  {
-    title: "Foundation Year",
-    modules: [
-      {
-        title: "Fundamentals",
-        code: "FD01",
-        credits: "30 credits",
-        description:
-          "This course introduces students to creative practice, focusing on theoretical, practical, and technical components. In early stages, students develop essential skills for academic success and personal growth, emphasizing reflection and technical skills like visual communication.",
-      },
-      {
-        title: "Thinking Through Making",
-        code: "FD02",
-        credits: "30 credits",
-        description:
-          "Students explore creative ideas through practical experimentation, developing their ability to think critically and creatively through making.",
-      },
-      {
-        title: "Developing Specialist Practice",
-        code: "FD03",
-        credits: "30 credits",
-        description:
-          "This module develops specialist creative skills and encourages students to explore their chosen subject area through practical and theoretical work.",
-      },
-      {
-        title: "Specialist Project",
-        code: "FD04",
-        credits: "30 credits",
-        description:
-          "Students complete an independent specialist project demonstrating the knowledge, skills, and creative development gained throughout the foundation year.",
-      },
-    ],
-  },
-  {
-    title: "First Year",
-    modules: [
-      {
-        title: "Creative Practice",
-        code: "FY01",
-        credits: "30 credits",
-        description:
-          "Students develop core creative and technical skills while exploring fundamental principles of their chosen discipline.",
-      },
-      {
-        title: "Contextual Studies",
-        code: "FY02",
-        credits: "30 credits",
-        description:
-          "An introduction to the historical, cultural, and theoretical contexts that influence creative practice.",
-      },
-      {
-        title: "Design Development",
-        code: "FY03",
-        credits: "30 credits",
-        description:
-          "Students develop ideas from initial concepts through experimentation, research, and practical development.",
-      },
-      {
-        title: "Creative Project",
-        code: "FY04",
-        credits: "30 credits",
-        description:
-          "A practical project allowing students to apply the knowledge and skills developed during the first year.",
-      },
-    ],
-  },
-  {
-    title: "Second Year",
-    modules: [
-      {
-        title: "Advanced Creative Practice",
-        code: "SY01",
-        credits: "30 credits",
-        description:
-          "Students build advanced practical and conceptual skills while developing a stronger individual creative practice.",
-      },
-      {
-        title: "Professional Practice",
-        code: "SY02",
-        credits: "30 credits",
-        description:
-          "Students explore professional environments, industry expectations, collaboration, and professional development.",
-      },
-      {
-        title: "Research and Development",
-        code: "SY03",
-        credits: "30 credits",
-        description:
-          "Students undertake deeper research and use their findings to inform and develop creative projects.",
-      },
-      {
-        title: "Major Project",
-        code: "SY04",
-        credits: "30 credits",
-        description:
-          "A substantial project that demonstrates the student's developing creative identity and professional capabilities.",
-      },
-    ],
-  },
-  {
-    title: "Third Year",
-    modules: [
-      {
-        title: "Independent Practice",
-        code: "TY01",
-        credits: "30 credits",
-        description:
-          "Students establish an independent creative practice and develop a distinctive approach to their chosen discipline.",
-      },
-      {
-        title: "Industry Practice",
-        code: "TY02",
-        credits: "30 credits",
-        description:
-          "Students prepare for professional practice by engaging with industry-focused projects, collaboration, and professional standards.",
-      },
-      {
-        title: "Final Research Project",
-        code: "TY03",
-        credits: "30 credits",
-        description:
-          "Students undertake an advanced research project that supports and informs their final creative work.",
-      },
-      {
-        title: "Final Major Project",
-        code: "TY04",
-        credits: "30 credits",
-        description:
-          "The final major project brings together the student's creative, theoretical, and technical development into a substantial body of work.",
-      },
-    ],
-  },
-];
+type Module = {
+  code: string;
+  title: string;
+  description: string;
+  credits: number;
+};
 
-export default function CourseStructure() {
+export type CourseStructureProps = {
+  title: string;
+  modules: readonly Module[];
+};
+
+type Props = {
+  courseStructure: readonly CourseStructureProps[];
+};
+
+export default function CourseStructure({ courseStructure }: Props) {
   const [activeYear, setActiveYear] = useState(0);
   const [openModule, setOpenModule] = useState(0);
 
-  const currentYear = courseYears[activeYear];
+  const currentYear = courseStructure[activeYear];
 
   const handleYearChange = (index: number) => {
     setActiveYear(index);
@@ -165,20 +46,22 @@ export default function CourseStructure() {
           {/* Year Tabs */}
           <div className="absolute left-1/2 top-0 z-10 w-[calc(100%-32px)] -translate-x-1/2 -translate-y-1/2 sm:w-auto">
             <div className="flex overflow-x-auto rounded-full border border-[#30468f] bg-[#071348] p-2.5 whitespace-nowrap scrollbar-hide">
-              {courseYears.map((year, index) => (
-                <button
-                  key={year.title}
-                  type="button"
-                  onClick={() => handleYearChange(index)}
-                  className={`text-xl font-medium leading-7 px-5 py-3.5 rounded-full ${
-                    activeYear === index
-                      ? "bg-[#a01b9b] text-white"
-                      : "text-white hover:bg-[#0b1955]"
-                  }`}
-                >
-                  / {year.title}
-                </button>
-              ))}
+              {courseStructure?.map(
+                (year: CourseStructureProps, index: number) => (
+                  <button
+                    key={year.title}
+                    type="button"
+                    onClick={() => handleYearChange(index)}
+                    className={`text-xl font-medium leading-7 px-5 py-3.5 rounded-full ${
+                      activeYear === index
+                        ? "bg-[#a01b9b] text-white"
+                        : "text-white hover:bg-[#0b1955]"
+                    }`}
+                  >
+                    / {year.title}
+                  </button>
+                ),
+              )}
             </div>
           </div>
 
@@ -195,7 +78,7 @@ export default function CourseStructure() {
 
           {/* Modules */}
           <div>
-            {currentYear.modules.map((module, index) => {
+            {currentYear.modules.map((module: Module, index: number) => {
               const isOpen = openModule === index;
 
               return (

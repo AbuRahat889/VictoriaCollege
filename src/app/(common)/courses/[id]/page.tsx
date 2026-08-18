@@ -1,23 +1,33 @@
+"use client";
+
 import CourseInfoSection from "@/components/Courses/CourseInfoSection";
 import CallToAction from "@/components/CoursesDetails/CallToAction";
 import CourseStructure from "@/components/CoursesDetails/CourseStructure";
 import DownloadCenter from "@/components/CoursesDetails/DownloadCenter";
 import FaqSection from "@/components/CoursesDetails/FaqSection";
 import Breadcrumb from "@/components/sheard/Breadcrumb";
+import { courseData } from "@/constants/courseData";
+import { CourseInfoSectionProps } from "@/types/courseType";
+import { useParams } from "next/navigation";
 
 export default function page() {
+  const params = useParams();
+  const courseSlug = params.id;
+  const courseInfo = courseData.find((course) => course.slug === courseSlug);
   return (
     <div className="bg-[#030a2e]">
       <Breadcrumb
         currentPage="Courses Details Page"
-        title="BA (Hons) Fashion Design"
-        description="This course introduces students to creative practice, focusing on theoretical, practical, and technical components. In early stages, students develop essential skills for academic success and personal growth, emphasizing reflection and technical skills like visual communication. As they progress, they engage with methodologies, enhancing understanding of processes and fostering critical thinking, collaboration, and problem-solving. "
+        title={courseInfo?.title ?? ""}
+        description={courseInfo?.shortDescription ?? ""}
         isRightImg={false}
         isLeftImg={false}
       />
-      <CourseInfoSection />
-      <CourseStructure />
-      <FaqSection />
+      <CourseInfoSection
+        courseInfo={courseInfo?.courseInfo as CourseInfoSectionProps}
+      />
+      <CourseStructure courseStructure={courseInfo?.courseStructure as any} />
+      <FaqSection faqData={courseInfo?.faqs as any} />
       <DownloadCenter />
       <CallToAction />
     </div>

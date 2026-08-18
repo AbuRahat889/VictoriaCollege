@@ -3,9 +3,11 @@ import CourseCard from "./CourseCard";
 import Heading from "../sheard/Heading";
 
 export default function AllCourses() {
-  const largeCard = courseData.find((c) => c.variant === "large");
-  const mediumCards = courseData.filter((c) => c.variant === "medium");
-  const tallCard = courseData.find((c) => c.variant === "tall");
+  const largeCard = courseData?.find((c) => c.variant === "large");
+
+  const mediumCards = courseData?.filter((c) => c.variant === "medium");
+
+  const tallCard = courseData?.find((c) => c.variant === "tall");
 
   return (
     <div className="bg-[#030a2e] py-20 px-5 lg:px-10">
@@ -33,5 +35,3 @@ export default function AllCourses() {
     </div>
   );
 }
-
-

@@ -9,7 +9,7 @@ interface CourseCardProps {
   slug: string;
   image: StaticImageData | string;
   title: string;
-  description: string;
+  shortDescription: string;
   school?: string;
   duration?: string;
   variant?: "large" | "medium" | "tall";
@@ -19,7 +19,7 @@ export default function CourseCard({
   slug,
   image,
   title,
-  description,
+  shortDescription,
   school,
   duration,
   variant = "medium",
@@ -71,8 +71,8 @@ export default function CourseCard({
           {title}
         </h3>
 
-        <p className="mt-3 text-sm font-normal leading-5 text-primaryText">
-          {description}
+        <p className="mt-3 text-xs font-normal leading-5 text-primaryText">
+          {shortDescription}
         </p>
 
         {variant === "tall" && school && (

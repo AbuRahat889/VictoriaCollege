@@ -1,7 +1,6 @@
-import React from "react";
 import RequirementsFAQ from "./Faqs";
 
-export default function FaqSection() {
+export default function FaqSection({ faqData }: { faqData: any }) {
   return (
     <div className="container mx-auto px-5 md:px-0 py-10 md:py-20">
       <div className="text-center">
@@ -14,7 +13,7 @@ export default function FaqSection() {
           Everything you need to know about applying and studying
         </p>
       </div>
-      <RequirementsFAQ />
+      <RequirementsFAQ faqData={faqData} />
     </div>
   );
 }

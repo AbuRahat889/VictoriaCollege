@@ -6,7 +6,7 @@ export default function GridYxasis() {
       {[0, 1, 2, 3, 4].map((i) => (
         <div
           key={i}
-          className="absolute top-0 bottom-0 w-px bg-[#0f253b] opacity-25"
+          className="absolute top-0 bottom-0 w-px bg-[#0f243a] opacity-55"
           style={{
             left: `${(i + 1) * (100 / 6)}%`,
           }}

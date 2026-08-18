@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import {
+  Award,
+  Banknote,
+  BookOpen,
   Calendar,
   Clock,
-  MapPin,
-  Banknote,
-  Award,
-  Users,
-  BookOpen,
   GraduationCap,
+  MapPin,
+  Users,
 } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 // Replace these with your actual image imports
 // import photo1 from "@/assets/CourseInfo/photo1.jpg";
@@ -20,81 +20,27 @@ import bgImage from "@/assets/courses/circle.png";
 import photo1 from "@/assets/courses/courseImage2.jpg";
 import photo2 from "@/assets/courses/courseInfo.png";
 import photo3 from "@/assets/testimonial/testimonialImage2.png";
+import { CourseInfoSectionProps, TabKey, tabOrder } from "@/types/courseType";
 
-type TabKey = "overview" | "structure" | "admissions";
+const iconMap = {
+  Calendar,
+  Clock,
+  MapPin,
+  Banknote,
+  Award,
+  Users,
+  BookOpen,
+  GraduationCap,
+} as const;
 
-type TabData = {
-  [key in TabKey]: {
-    label: string;
-    heading: string;
-    subheading: string;
-    cards: {
-      icon:
-        | typeof Calendar
-        | typeof Clock
-        | typeof MapPin
-        | typeof Banknote
-        | typeof Award
-        | typeof Users
-        | typeof BookOpen
-        | typeof GraduationCap;
-      title: string;
-      value: string;
-    }[];
-  };
-};
 
-const tabsData: TabData = {
-  overview: {
-    label: "Course Overview",
-    heading: "Course Information",
-    subheading: "Everything you need to know about this course at a glance",
-    cards: [
-      { icon: Calendar, title: "Start Date", value: "November, February" },
-      { icon: Clock, title: "Duration", value: "4 Years" },
-      { icon: Clock, title: "Study Mode", value: "Full Time" },
-      { icon: MapPin, title: "Locations", value: "Canary Wharf" },
-      { icon: Banknote, title: "Tuition Fee (UK)", value: "£ 9535" },
-      {
-        icon: Award,
-        title: "Awarding Body",
-        value: "Arts University Plymouth",
-      },
-    ],
-  },
-  structure: {
-    label: "Course Structure & Details",
-    heading: "Course Structure",
-    subheading: "How the course is organised across each year of study",
-    cards: [
-      { icon: BookOpen, title: "Year 1", value: "Foundation Modules" },
-      { icon: BookOpen, title: "Year 2", value: "Core Specialisation" },
-      { icon: BookOpen, title: "Year 3", value: "Industry Placement" },
-      { icon: GraduationCap, title: "Year 4", value: "Final Major Project" },
-      { icon: Users, title: "Class Size", value: "Small Group Teaching" },
-      { icon: Clock, title: "Contact Hours", value: "12–16 hrs / week" },
-    ],
-  },
-  admissions: {
-    label: "Admissions & Key Details",
-    heading: "Admissions & Key Details",
-    subheading: "What you need to apply and key entry requirements",
-    cards: [
-      { icon: Award, title: "Entry Requirements", value: "UCAS Tariff 96+" },
-      { icon: Calendar, title: "Application Deadline", value: "UCAS January" },
-      { icon: Users, title: "Interview Required", value: "Portfolio Review" },
-      { icon: GraduationCap, title: "UCAS Code", value: "W231" },
-      { icon: MapPin, title: "Campus", value: "Canary Wharf" },
-      { icon: Banknote, title: "International Fee", value: "£ 14,500" },
-    ],
-  },
-};
 
-const tabOrder: TabKey[] = ["overview", "structure", "admissions"];
-
-export default function CourseInfoSection() {
+interface Props {
+  courseInfo: CourseInfoSectionProps;
+}
+export default function CourseInfoSection({ courseInfo }: Props) {
   const [activeTab, setActiveTab] = useState<TabKey>("overview");
-  const current = tabsData[activeTab];
+  const current = courseInfo?.tabs?.find((t) => t.id === activeTab);
 
   return (
     <section className="w-full bg-[#030a2e] pb-16">
@@ -162,7 +108,7 @@ export default function CourseInfoSection() {
                     : "text-white/70 hover:text-primary"
                 }`}
               >
-                /{tabsData[id].label}
+                /{id}
               </button>
             ))}
           </div>
@@ -171,31 +117,42 @@ export default function CourseInfoSection() {
         {/* Heading */}
         <div className="text-center mt-10 md:mt-14 mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primaryText">
-            {current.heading}
+            {current?.heading}
           </h2>
           <p className="text-primaryText text-sm sm:text-base mt-2">
-            {current.subheading}
+            {current?.subheading}
           </p>
         </div>
 
         {/* Info grid — driven by active tab */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-5xl mx-auto">
-          {current.cards.map(({ icon: Icon, title, value }) => (
-            <div
-              key={title}
-              className="flex flex-col items-center text-center gap-3 bg-[#0a1044] border border-white/10 rounded-2xl px-6 py-8 hover:border-primary/50 transition-colors duration-300"
-            >
-              <span className="flex items-center justify-center w-10 h-10 rounded-full">
-                <Icon className="w-7 h-7 text-white" strokeWidth={2} />
-              </span>
-              <div>
-                <h3 className="text-white font-semibold text-sm sm:text-base">
-                  {title}
-                </h3>
-                <p className="text-white/50 text-xs sm:text-sm mt-1">{value}</p>
+          {current?.cards?.map((i) => {
+            const iconName = i.icon as keyof typeof iconMap;
+            const Icon = iconMap[iconName];
+
+            return (
+              <div
+                key={i.title}
+                className="flex flex-col items-center text-center gap-3 bg-[#0a1044] border border-white/10 rounded-2xl px-6 py-8 hover:border-primary/50 transition-colors duration-300"
+              >
+                <span className="flex items-center justify-center w-10 h-10 rounded-full">
+                  {Icon && (
+                    <Icon className="w-7 h-7 text-white" strokeWidth={2} />
+                  )}
+                </span>
+
+                <div>
+                  <h3 className="text-white font-semibold text-sm sm:text-base">
+                    {i.title}
+                  </h3>
+
+                  <p className="text-white/50 text-xs sm:text-sm mt-1">
+                    {i.value}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
