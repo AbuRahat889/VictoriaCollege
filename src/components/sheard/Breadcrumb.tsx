@@ -30,7 +30,7 @@ export default function Breadcrumb({
       }}
       className="relative overflow-hidden "
     >
-      <div className="container mx-auto relative px-5 py-16 md:py-20">
+      <div className="container mx-auto relative px-5 pt-16 md:pt-20">
         <div className="relative flex items-center justify-center min-h-65">
           {/* Left Image */}
           {isLeftImg && (

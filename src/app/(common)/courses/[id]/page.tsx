@@ -1,3 +1,4 @@
+import CourseInfoSection from "@/components/Courses/CourseInfoSection";
 import CallToAction from "@/components/CoursesDetails/CallToAction";
 import CourseStructure from "@/components/CoursesDetails/CourseStructure";
 import DownloadCenter from "@/components/CoursesDetails/DownloadCenter";
@@ -14,6 +15,7 @@ export default function page() {
         isRightImg={false}
         isLeftImg={false}
       />
+      <CourseInfoSection />
       <CourseStructure />
       <FaqSection />
       <DownloadCenter />
