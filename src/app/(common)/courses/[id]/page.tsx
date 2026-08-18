@@ -1,6 +1,6 @@
 import CallToAction from "@/components/CoursesDetails/CallToAction";
+import DownloadCenter from "@/components/CoursesDetails/DownloadCenter";
 import Breadcrumb from "@/components/sheard/Breadcrumb";
-import React from "react";
 
 export default function page() {
   return (
@@ -12,6 +12,7 @@ export default function page() {
         isRightImg={false}
         isLeftImg={false}
       />
+      <DownloadCenter />
       <CallToAction />
     </div>
   );

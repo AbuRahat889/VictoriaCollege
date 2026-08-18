@@ -1,4 +1,3 @@
-import React from "react";
 import bgImage from "@/assets/callToAction.png";
 import Button from "../ui/button";
 
@@ -6,10 +5,7 @@ export default function CallToAction() {
   return (
     <div className="container mx-auto px-2 md:px-0 py-10 md:py-20">
       <section
-        className="
-        px-4 sm:px-6 lg:px-8
-        py-8 sm:py-14 md:py-17
-        "
+        className=" px-4 sm:px-6 lg:px-8py-8 sm:py-14 md:py-17"
         style={{
           backgroundImage: `url(${bgImage.src})`,
           backgroundSize: "100% 100%",
