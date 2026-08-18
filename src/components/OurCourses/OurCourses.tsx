@@ -7,6 +7,7 @@ import { useState } from "react";
 import Heading from "../sheard/Heading";
 import Button from "../ui/button";
 import { COURSES_FAQ } from "@/constants/courseData";
+import Link from "next/link";
 
 export default function OurCourses() {
   const [openIndex, setOpenIndex] = useState<number>(0);
@@ -23,9 +24,9 @@ export default function OurCourses() {
             subtitle="OUR COURSES"
             title="Explore our creative courses"
           />
-          <div className="w-52 md:max-w-52">
+          <Link href="/courses" className="w-52 md:max-w-52">
             <Button>View Courses</Button>
-          </div>
+          </Link>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-14 lg:grid-cols-2 items-center lg:gap-20">
           {/* Left column */}

@@ -1,6 +1,7 @@
 import { photos, tags } from "@/constants/heroData";
 import Button from "../ui/button";
 import { DropFloatImage, DropTag } from "./HeroAnimation";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -25,7 +26,9 @@ export default function Hero() {
               latest courses.
             </p>
             <div className="mt-10 md:mt-16.5 max-w-[320px]">
-              <Button>Explore Courses</Button>
+              <Link href="/courses">
+                <Button>Explore Courses</Button>
+              </Link>
             </div>
           </div>
 

@@ -4,7 +4,6 @@ import logoImage from "@/assets/logo.png";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import GridYxasis from "./GridYxasis";
 import { usePathname } from "next/navigation";
 import Button from "../ui/button";
@@ -16,7 +15,6 @@ const NAV_ITEMS = [
 ];
 
 export default function Navbar() {
-  const [activeHref, setActiveHref] = useState(NAV_ITEMS[0].href);
   const pathName = usePathname();
 
   return (
@@ -36,12 +34,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between gap-6 ">
           <div className="hidden md:flex items-center gap-14 text-[11px] font-semibold tracking-widest text-white uppercase">
             {NAV_ITEMS.map((item) => {
-              const isActive = activeHref === item.href;
+              const isActive = item.href.startsWith("#")
+                ? false
+                : item.href === "/"
+                  ? pathName === "/"
+                  : pathName === item.href ||
+                    pathName.startsWith(item.href + "/");
+
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setActiveHref(item.href)}
                   className={`pb-1 border-b-2 transition-colors duration-300 ease-in-out text-base font-medium leading-6 ${
                     isActive
                       ? "text-primary border-primary"
