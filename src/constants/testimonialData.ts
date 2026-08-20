@@ -1,9 +1,9 @@
-import Student1 from "@/assets/testimonial/testimonialImage3.png";
-import Student2 from "@/assets/testimonial/testimonialImage2.png";
-import Student3 from "@/assets/testimonial/testimonialImage1.png";
+import Student1 from "@/assets/testimonial/testimonialImage3.webp";
+import Student2 from "@/assets/testimonial/testimonialImage2.webp";
+import Student3 from "@/assets/testimonial/testimonialImage1.webp";
 
-import story1 from "@/assets/testimonial/testimonialImage2.png";
-import story2 from "@/assets/testimonial/testimonialImage1.png";
+import story1 from "@/assets/testimonial/testimonialImage2.webp";
+import story2 from "@/assets/testimonial/testimonialImage1.webp";
 
 export interface Testimonial {
   name: string;

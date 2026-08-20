@@ -1,6 +1,6 @@
-import course1 from "@/assets/courses/courseImage1.jpg";
-import course2 from "@/assets/courses/courseImage2.jpg";
-import course3 from "@/assets/courses/courseImage1.jpg";
+import course1 from "@/assets/courses/courseImage1.webp";
+import course2 from "@/assets/courses/courseImage2.webp";
+import course3 from "@/assets/courses/courseImage1.webp";
 // import { Award, Banknote, Calendar, Clock, MapPin } from "lucide-react";
 
 type Course = {

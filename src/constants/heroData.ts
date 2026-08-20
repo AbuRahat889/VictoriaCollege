@@ -1,7 +1,7 @@
-import Image1 from "@/assets/heroImage/ayo-ogunseinde.png";
-import Image2 from "@/assets/heroImage/ahmed-carter.png";
-import Image3 from "@/assets/heroImage/kelly-sikkema.png";
-import Image4 from "@/assets/heroImage/molly-mears.png";
+import Image1 from "@/assets/heroImage/ayo-ogunseinde.webp";
+import Image2 from "@/assets/heroImage/ahmed-carter.webp";
+import Image3 from "@/assets/heroImage/kelly-sikkema.webp";
+import Image4 from "@/assets/heroImage/molly-mears.webp";
 import { Photo, Tag } from "@/types/heroType";
 
 export const photos: Photo[] = [

@@ -1,6 +1,6 @@
 "use client";
 
-import coursesImage from "@/assets/OurCourses.png";
+import coursesImage from "@/assets/OurCourses.webp";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -79,6 +79,7 @@ export default function OurCourses() {
               alt="Students attending a fashion and design lecture"
               fill
               className="object-cover h-full w-full"
+              loading="lazy"
             />
           </div>
         </div>

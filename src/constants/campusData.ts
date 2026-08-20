@@ -1,6 +1,6 @@
-import Campus1 from "@/assets/sliderImages/Rectangle 188.png";
-import Campus2 from "@/assets/sliderImages/Rectangle 190.png";
-import Campus3 from "@/assets/sliderImages/Rectangle 191.png";
+import Campus1 from "@/assets/sliderImages/Rectangle 188.webp";
+import Campus2 from "@/assets/sliderImages/Rectangle 190.webp";
+import Campus3 from "@/assets/sliderImages/Rectangle 191.webp";
 
 export interface Campus {
   name: string;

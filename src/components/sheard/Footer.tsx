@@ -9,12 +9,12 @@ import {
 import { BsTwitterX } from "react-icons/bs";
 import Image from "next/image";
 
-import advanceHE from "@/assets/footer/advanceHe.png";
-import qaa from "@/assets/footer/menmer.png";
-import cyber from "@/assets/footer/cyber-ess.png";
+import advanceHE from "@/assets/footer/advanceHe.webp";
+import qaa from "@/assets/footer/menmer.webp";
+import cyber from "@/assets/footer/cyber-ess.webp";
 
-import logo from "@/assets/footerLogo.png";
-import bgImage from "@/assets/footer/circles.png";
+import logo from "@/assets/footerLogo.webp";
+import bgImage from "@/assets/footer/circles.webp";
 import GridYxasis from "./GridYxasis";
 
 export default function Footer() {

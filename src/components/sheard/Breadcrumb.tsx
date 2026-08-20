@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import leftImage from "@/assets/breadcrum1.png";
-import rightImage from "@/assets/breadcrum2.png";
-import bgImage from "@/assets/partner/circleBg.png";
+import leftImage from "@/assets/breadcrum1.webp";
+import rightImage from "@/assets/breadcrum2.webp";
+import bgImage from "@/assets/partner/circleBg.webp";
 
 interface BreadcrumbProps {
   title: string;

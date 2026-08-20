@@ -1,6 +1,6 @@
-import logo2 from "@/assets/partner/arts-university.png";
-import bgImage from "@/assets/partner/circleBg.png";
-import logo1 from "@/assets/partner/university-london.png";
+import logo2 from "@/assets/partner/arts-university.webp";
+import bgImage from "@/assets/partner/circleBg.webp";
+import logo1 from "@/assets/partner/university-london.webp";
 import Image from "next/image";
 import Heading from "./sheard/Heading";
 

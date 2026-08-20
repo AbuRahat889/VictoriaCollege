@@ -1,4 +1,4 @@
-import notFoundImage from "@/assets/error.jpg";
+import notFoundImage from "@/assets/error.webp";
 import { ChevronRight, Smile } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

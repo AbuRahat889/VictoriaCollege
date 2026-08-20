@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { campuses } from "@/constants/campusData";
 import Heading from "./sheard/Heading";
 import { MediaButton } from "./ui/icon";
+import Image from "next/image";
 
 export default function CampusSlider() {
   const [index, setIndex] = useState(0);
@@ -30,18 +31,24 @@ export default function CampusSlider() {
         <div className="relative h-56 sm:h-70 md:h-85 lg:h-105 flex items-center justify-center mt-16 sm:mt-20 md:mt-24 lg:mt-32 w-full">
           {/* Prev (side) slide */}
           <div className="absolute bottom-0 left-2 sm:left-6 md:left-10 lg:left-16 w-[30%] sm:w-[32%] h-[80%] sm:h-[85%] rounded-md overflow-hidden hidden sm:block z-999">
-            <img
+            <Image
               src={campuses[prevIndex].image}
               alt={campuses[prevIndex].name}
+              height={500}
+              width={500}
+              loading="lazy"
               className="w-full h-full object-cover opacity-70"
             />
           </div>
 
           {/* Next (side) slide */}
           <div className="absolute bottom-0 right-2 sm:right-6 md:right-10 lg:right-16 w-[30%] sm:w-[32%] h-[80%] sm:h-[85%] rounded-md overflow-hidden hidden sm:block z-999">
-            <img
+            <Image
               src={campuses[nextIndex].image}
               alt={campuses[nextIndex].name}
+              height={500}
+              width={500}
+              loading="lazy"
               className="w-full h-full object-cover opacity-70"
             />
           </div>

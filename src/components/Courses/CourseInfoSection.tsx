@@ -14,12 +14,12 @@ import Image from "next/image";
 import { useState } from "react";
 
 // Replace these with your actual image imports
-// import photo1 from "@/assets/CourseInfo/photo1.jpg";
-// import photo2 from "@/assets/CourseInfo/photo2.jpg";
-import bgImage from "@/assets/courses/circle.png";
-import photo1 from "@/assets/courses/courseImage2.jpg";
-import photo2 from "@/assets/courses/courseInfo.png";
-import photo3 from "@/assets/testimonial/testimonialImage2.png";
+// import photo1 from "@/assets/CourseInfo/photo1.webp";
+// import photo2 from "@/assets/CourseInfo/photo2.webp";
+import bgImage from "@/assets/courses/circle.webp";
+import photo1 from "@/assets/courses/courseImage2.webp";
+import photo2 from "@/assets/courses/courseInfo.webp";
+import photo3 from "@/assets/testimonial/testimonialImage2.webp";
 import { CourseInfoSectionProps, TabKey, tabOrder } from "@/types/courseType";
 
 const iconMap = {
@@ -32,8 +32,6 @@ const iconMap = {
   BookOpen,
   GraduationCap,
 } as const;
-
-
 
 interface Props {
   courseInfo: CourseInfoSectionProps;

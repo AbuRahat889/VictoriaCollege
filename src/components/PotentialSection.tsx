@@ -1,9 +1,9 @@
 "use client";
 
-import bgImage from "@/assets/circleBg.png";
-import potential1 from "@/assets/Potential/potential1.png";
-import potential2 from "@/assets/Potential/potential2.jpg";
-import potential3 from "@/assets/Potential/potential63.jpg";
+import bgImage from "@/assets/circleBg.webp";
+import potential1 from "@/assets/Potential/potential1.webp";
+import potential2 from "@/assets/Potential/potential2.webp";
+import potential3 from "@/assets/Potential/potential63.webp";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -81,6 +81,7 @@ export default function PotentialSection() {
                   fill
                   sizes="(max-width: 768px) 40vw, 410px"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </motion.div>
               {/* Photo 2 */}

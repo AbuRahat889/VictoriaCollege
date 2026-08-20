@@ -1,4 +1,4 @@
-import bgImage from "@/assets/callToAction.png";
+import bgImage from "@/assets/callToAction.webp";
 import Button from "../ui/button";
 
 export default function CallToAction() {

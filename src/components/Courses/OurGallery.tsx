@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import gallery1 from "@/assets/breadcrum1.png";
-import gallery2 from "@/assets/breadcrum2.png";
-import gallery3 from "@/assets/testimonial/testimonialImage1.png";
-import gallery4 from "@/assets/testimonial/testimonialImage2.png";
-import gallery5 from "@/assets/Potential/potential1.png";
-import gallery6 from "@/assets/Potential/potential63.jpg";
-import gallery7 from "@/assets/Potential/potential63.jpg";
+import gallery1 from "@/assets/breadcrum1.webp";
+import gallery2 from "@/assets/breadcrum2.webp";
+import gallery3 from "@/assets/testimonial/testimonialImage1.webp";
+import gallery4 from "@/assets/testimonial/testimonialImage2.webp";
+import gallery5 from "@/assets/Potential/potential1.webp";
+import gallery6 from "@/assets/Potential/potential63.webp";
+import gallery7 from "@/assets/Potential/potential63.webp";
 import useEmblaCarousel from "embla-carousel-react";
 
 export const galleryData = [

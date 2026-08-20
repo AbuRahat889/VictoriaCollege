@@ -1,6 +1,6 @@
 "use client";
 
-import logoImage from "@/assets/logo.png";
+import logoImage from "@/assets/logo.webp";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
